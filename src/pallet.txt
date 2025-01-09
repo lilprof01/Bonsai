@@ -1,0 +1,7 @@
+#00b289 - teal
+
+#4c4d5f -grey
+
+#ffffff - white
+
+#f8db62 - gold
