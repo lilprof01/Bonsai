@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body, html {
+  font-family: 'Nova Square', cursive;
+}
+
+.right{
+  position: absolute;
+  right: 0;
+  top: 40%;
+}

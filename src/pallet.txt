@@ -4,4 +4,6 @@
 
 #ffffff - white
 
+#f5f5f5 - light grey
+
 #f8db62 - gold
