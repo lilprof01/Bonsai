@@ -49,20 +49,21 @@ const Header = () => {
   const toggleMenu = () => {
     setTimeout(() => {
       setIsOpen((prev) => !prev);
-    }, 200);
+    }, 100);
   };
 
   const toggleTemplate = () => {
     setTimeout(() => {
       setIsTemplate((prev) => !prev);
-    }, 200);
+    }, 100);
     clearTimeout();
   };
 
   const toggleVisible = () => {
     setTimeout(() => {
       setVisible((prev) => !prev);
-    }, 200);
+    }, 100);
+    clearTimeout();
   };
 
   return (
@@ -173,13 +174,11 @@ const Header = () => {
             <i className="bx bx-chevron-down"></i>
             {/* Templates dropdown */}
             <div
-              className={`absolute top-12 -left-20 bg-white shadow-lg justify-between transition-all ${
+              className={`absolute top-12 -left-20 bg-white shadow-lg justify-between ${
                 isTemplate ? "flex" : "hidden"
               } hover:flex`}
             >
-              <div
-                className={`flex-col justify-between flex hover:flex transition-all`}
-              >
+              <div className={`flex-col justify-between flex`}>
                 <Template
                   icon={<FontAwesomeIcon icon={faFileInvoice} />}
                   text="Contract Templates"
@@ -238,9 +237,7 @@ const Header = () => {
               </div>
 
               {/* Feature box */}
-              <div
-                className={`block transition-all`}
-              >
+              <div className={`block`}>
                 <Feature
                   title="Featured Contract Templates"
                   text1="text1"
