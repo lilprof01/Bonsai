@@ -8,6 +8,8 @@ import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faReceipt } from "@fortawesome/free-solid-svg-icons";
 import { faFileInvoiceDollar } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
+import Template from "./template";
+import Feature from "./feature";
 
 // Dropbox Card components
 const DropBox = (props) => {
@@ -41,6 +43,8 @@ const FlowCard = (props) => {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTemplate, setIsTemplate] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   const toggleMenu = () => {
     setTimeout(() => {
@@ -48,7 +52,12 @@ const Header = () => {
     }, 200);
   };
 
-  const [visible, setVisible] = useState(false);
+  const toggleTemplate = () => {
+    setTimeout(() => {
+      setIsTemplate((prev) => !prev);
+    }, 200);
+    clearTimeout();
+  };
 
   const toggleVisible = () => {
     setTimeout(() => {
@@ -155,9 +164,93 @@ const Header = () => {
             </div>
           </li>
 
-          <li className="opacity-70 hover:opacity-100 hover:cursor-pointer transition-all">
+          <li
+            onMouseEnter={toggleTemplate}
+            onMouseLeave={toggleTemplate}
+            className="relative opacity-70 hover:opacity-100 hover:cursor-pointer transition-all"
+          >
             Templates
             <i className="bx bx-chevron-down"></i>
+            {/* Templates dropdown */}
+            <div
+              className={`absolute top-12 -left-20 bg-white shadow-lg justify-between transition-all ${
+                isTemplate ? "flex" : "hidden"
+              } hover:flex`}
+            >
+              <div
+                className={`flex-col justify-between flex hover:flex transition-all`}
+              >
+                <Template
+                  icon={<FontAwesomeIcon icon={faFileInvoice} />}
+                  text="Contract Templates"
+                  arrow={<i className="bx-md bx bx-chevron-right"></i>}
+                />
+                <Template
+                  icon={<FontAwesomeIcon icon={faFileInvoice} />}
+                  text="Contract Templates"
+                  arrow={<i className="bx-md bx bx-chevron-right"></i>}
+                />
+                <Template
+                  icon={<FontAwesomeIcon icon={faFileInvoice} />}
+                  text="Contract Templates"
+                  arrow={<i className="bx-md bx bx-chevron-right"></i>}
+                />
+                <Template
+                  icon={
+                    <FontAwesomeIcon
+                      icon={faFileInvoice}
+                      text="Contract Templates"
+                    />
+                  }
+                  text="Contract Templates"
+                  arrow={<i className="bx-md bx bx-chevron-right"></i>}
+                />
+                <Template
+                  icon={
+                    <FontAwesomeIcon
+                      icon={faFileInvoice}
+                      text="Contract Templates"
+                    />
+                  }
+                  text="Contract Templates"
+                  arrow={<i className="bx-md bx bx-chevron-right"></i>}
+                />
+                <Template
+                  icon={
+                    <FontAwesomeIcon
+                      icon={faFileInvoice}
+                      text="Contract Templates"
+                    />
+                  }
+                  text="Contract Templates"
+                  arrow={<i className="bx-md bx bx-chevron-right"></i>}
+                />
+                <Template
+                  icon={
+                    <FontAwesomeIcon
+                      icon={faFileInvoice}
+                      text="Contract Templates"
+                    />
+                  }
+                  text="Contract Templates"
+                  arrow={<i className="bx-md bx bx-chevron-right"></i>}
+                />
+              </div>
+
+              {/* Feature box */}
+              <div
+                className={`block transition-all`}
+              >
+                <Feature
+                  title="Featured Contract Templates"
+                  text1="text1"
+                  text2="text2"
+                  text3="text3"
+                  text4="text4"
+                  link="See All Templates"
+                />
+              </div>
+            </div>
           </li>
 
           <li className="opacity-70 hover:opacity-100 hover:cursor-pointer transition-all">
