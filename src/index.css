@@ -8,6 +8,23 @@ body, html {
   font-family: 'Nova Square', cursive;
 }
 
+.body{
+  position: relative;
+  overflow: hidden;
+}
+
+.body::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #00b289;
+  transform: rotate(-40deg);
+  opacity: 0.1;
+}
+
 .right{
   position: absolute;
   right: 0;
@@ -65,5 +82,11 @@ body, html {
     /* left: 0; */
     rotate: 0deg;
     width: 500%;
+    background-color: #00b289;
   }
+}
+
+.bx-check{
+  color: #00b289;
+  font-weight: 700;
 }

@@ -45,6 +45,12 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isTemplate, setIsTemplate] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [selected, setSelected] = useState("");
+
+  const handleSeelect = (element) => {
+    console.log('selected', element);
+    setSelected(element);
+  };
 
   const toggleMenu = () => {
     setTimeout(() => {
@@ -67,7 +73,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex sm:px-20 px-4 py-4 justify-between align-middle bg-gray-100 items-center">
+    <header className="fixed top-0 z-50 w-full flex sm:px-20 px-4 py-4 justify-between align-middle bg-gray-100 items-center">
       <div className="flex items-center">
         <i className="bx-md bx bxl-xing"></i>
         <h1 className="text-2xl sm:block hidden">Company</h1>
@@ -174,78 +180,145 @@ const Header = () => {
             <i className="bx bx-chevron-down"></i>
             {/* Templates dropdown */}
             <div
-              className={`absolute top-12 -left-20 bg-white shadow-lg justify-between ${
+              onMouseEnter={toggleTemplate}
+              onMouseLeave={toggleTemplate}
+              className={`absolute top-12 -left-20 py-3 bg-white shadow-lg justify-between ${
                 isTemplate ? "flex" : "hidden"
               } hover:flex`}
             >
-              <div className={`flex-col justify-between flex`}>
+              <div className={`flex-col justify-start flex`}>
                 <Template
+                  onMouseEnter={() => handleSeelect('Contract Templates')}
                   icon={<FontAwesomeIcon icon={faFileInvoice} />}
                   text="Contract Templates"
                   arrow={<i className="bx-md bx bx-chevron-right"></i>}
                 />
                 <Template
+                  onMouseEnter={() => handleSeelect('Proposal Templates')}
                   icon={<FontAwesomeIcon icon={faFileInvoice} />}
-                  text="Contract Templates"
+                  text="Proposal Templates"
                   arrow={<i className="bx-md bx bx-chevron-right"></i>}
                 />
                 <Template
+                  onMouseEnter={() => handleSeelect('Invoice Templates')}
                   icon={<FontAwesomeIcon icon={faFileInvoice} />}
-                  text="Contract Templates"
+                  text="Invoice Templates"
                   arrow={<i className="bx-md bx bx-chevron-right"></i>}
                 />
                 <Template
+                  onMouseEnter={() => handleSeelect('Agreement Templates')}
                   icon={
                     <FontAwesomeIcon
                       icon={faFileInvoice}
-                      text="Contract Templates"
                     />
                   }
-                  text="Contract Templates"
+                  text="Agreement Templates"
                   arrow={<i className="bx-md bx bx-chevron-right"></i>}
                 />
                 <Template
+                  onMouseEnter={() => handleSeelect('Quote Templates')}
                   icon={
                     <FontAwesomeIcon
                       icon={faFileInvoice}
-                      text="Contract Templates"
                     />
                   }
-                  text="Contract Templates"
+                  text="Quote Templates"
                   arrow={<i className="bx-md bx bx-chevron-right"></i>}
                 />
                 <Template
+                  onMouseEnter={() => handleSeelect('Scope of Work Templates')}
                   icon={
                     <FontAwesomeIcon
                       icon={faFileInvoice}
-                      text="Contract Templates"
+                      text="Scope of Work Templates"
                     />
                   }
-                  text="Contract Templates"
+                  text="Scope of work Templates"
                   arrow={<i className="bx-md bx bx-chevron-right"></i>}
                 />
                 <Template
+                  onMouseEnter={() => handleSeelect('Brief Templates')}
                   icon={
                     <FontAwesomeIcon
                       icon={faFileInvoice}
-                      text="Contract Templates"
                     />
                   }
-                  text="Contract Templates"
+                  text="Brief Templates"
                   arrow={<i className="bx-md bx bx-chevron-right"></i>}
                 />
               </div>
 
               {/* Feature box */}
               <div className={`block`}>
-                <Feature
+                {selected === 'Contract Templates' && (
+                  <Feature
                   title="Featured Contract Templates"
-                  text1="text1"
-                  text2="text2"
-                  text3="text3"
-                  text4="text4"
+                  text1="Free Contract Maker"
+                  text2="Social Media Management Contract Template"
+                  text3="Graphich Design Contract Template"
+                  text4="Digital Market Contract Template"
                   link="See All Templates"
                 />
+                )}
+                {selected === 'Proposal Templates' && (
+                  <Feature
+                  title="Featured Proposal Templates"
+                  text1="Graphic design business propsoal Template"
+                  text2="Business Proposal Template"
+                  text3="Brand Ambassador proposal Template"
+                  text4="Data Entry proposal LetterTemplate"
+                  link="See All Templates"
+                />
+                )}
+                {selected === 'Invoice Templates' && (
+                  <Feature
+                  title="Featured Invoice Templates"
+                  text1="Free Contract Maker"
+                  text2="Social Media Management Contract Template"
+                  text3="Graphich Design Contract Template"
+                  text4="Digital Market Contract Template"
+                  link="See All Templates"
+                />
+                )}
+                {selected === 'Agreement Templates' && (
+                  <Feature
+                  title="Featured Agreement Templates"
+                  text1="Free Contract Maker"
+                  text2="Social Media Management Contract Template"
+                  text3="Graphich Design Contract Template"
+                  text4="Digital Market Contract Template"
+                  link="See All Templates"
+                />
+                )}
+                {selected === 'Quote Templates' && (
+                  <Feature
+                  title="Featured Quote Templates"
+                  text1="Free Contract Maker"
+                  text2="Social Media Management Contract Template"
+                  text3="Graphich Design Contract Template"
+                  text4="Digital Market Contract Template"
+                  link="See All Templates"
+                />
+                )}
+                {selected === 'Scope of Work Templates' && (
+                  <Feature
+                  title="Featured Scope of Work Templates"
+                  text1="Free Contract Maker"
+                  text2="Social Media Management Contract Template"
+                  text3="Graphich Design Contract Template"
+                  text4="Digital Market Contract Template"
+                  link="See All Templates"
+                />
+                )}
+                {selected === 'Brief Templates' && (
+                  <Feature
+                  title="Featured Brief Templates"
+                  text1="Free Contract Maker"
+                  text2="Social Media Management Contract Template"
+                  text3="Graphich Design Contract Template"
+                  text4="Digital Market Contract Template"
+                />
+                )}
               </div>
             </div>
           </li>

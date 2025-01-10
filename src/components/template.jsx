@@ -6,13 +6,16 @@ const Template = (props) => {
 
   const handleMouseOver = () => {
     setIsHovered(!isHovered);
+    if(props.onMouseEnter) {
+      props.onMouseEnter();
+    }
   };
   
   return (
     <div 
     onMouseOver={handleMouseOver}
     onMouseLeave={handleMouseOver}
-    className='relative flex items-center justify-start gap-2 p-6 w-80 hover:bg-[#f5f5f5] transition-all'>
+    className='relative flex items-center justify-start gap-2 p-5 w-80 hover:bg-[#f5f5f5] transition-all'>
       {props.icon}
       {props.text}
       <div className='absolute right-6 top-[30%]'>
