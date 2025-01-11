@@ -3,9 +3,18 @@ import Card from "./card";
 
 const Body = () => {
   return (
-    <div className="body bg-[#f5f5f5] h-[3000px] sm:px-20 pt-52 mt-[50px] flex flex-col gap-12">
-      <div className="h-[50px] w-[80%] mx-auto bg-[green] p-10 z-10"></div>
-      <div className="flex justify-between gap-8 z-10">
+    <div className="body bg-[#f5f5f5] sm:px-20 pt-20 sm:pt-52 mt-[50px] flex flex-col gap-12">
+      <div className="flex sm:flex-row flex-col align-middle items-center justify-between gap-20 mx-auto z-10">
+        <div className="sm:text-3xl">PLANS & PRICING</div>
+        <div className="flex align-middle items-center justify-between gap-8">
+          <h3>MONTHLY</h3>
+          <div className="relative w-14 h-8 bg-[#00b289] rounded-3xl flex align-middle items-center px-1">
+            <div className="absolute w-7 h-7 bg-white rounded-full"></div>
+          </div>
+          <h3>YEARLY</h3>
+        </div>
+      </div>
+      <div className="flex sm:flex-row flex-col justify-between gap-5 sm:p-6 z-10 w-full bg-[red]">
         <Card
           title="Starter"
           text="Ideal for freelancers and contractors just starting out."
