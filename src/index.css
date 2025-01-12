@@ -110,3 +110,7 @@ body, html {
   color: #00b289;
   font-weight: 700;
 }
+
+.bx-chevron-down{
+  opacity: 0.6;
+}

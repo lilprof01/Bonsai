@@ -16,6 +16,8 @@ const Body = () => {
           <h3>YEARLY</h3>
         </div>
       </div>
+
+      {/* Card section */}
       <div className="flex sm:flex-row flex-col justify-between gap-5 sm:p-0 p-6 z-10 w-full">
         <Card
           title="Starter"
@@ -65,8 +67,9 @@ const Body = () => {
         />
       </div>
 
-      <div className="w-full flex flex-col justify-between align-middle items-center gap-3 sm:py-12">
-        <h2 className="text-3xl p-8 opacity-80">
+      {/* Addon section */}
+      <div className="w-full flex flex-col justify-between align-middle items-center gap-3 px-6 sm:py-12">
+        <h2 className="text-2xl sm:text-3xl p-8 opacity-80 text-center">
           Super charge your work with add-ons
         </h2>
         <Addon
@@ -89,7 +92,8 @@ const Body = () => {
           per="/MONTH"
         />
       </div>
-      <div className="p-14 flex justify-between align-middle items-center w-5/6 mx-auto bg-[#f2faff] rounded-xl mb-12">
+
+      <div className="p-14 flex flex-col sm:flex-row text-center justify-between align-middle items-center gap-4 w-5/6 mx-auto bg-[#f2faff] rounded-xl mb-12">
         <div className="flex flex-col justify-between align-middle items-start gap-2">
           <p className="text-4xl opacity-65">It's <span className="opacity-100 text-[#00b289]">your</span> business.</p>
           <p className="text-4xl opacity-65">We're here to help it grow.</p>
