@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="z-10 border border-[#f5f5f5] flex flex-col justify-start gap-9 items-center py-16 px-8 bg-white shadow-md rounded-md popular w-full">
+    <div className="z-10 border border-[#00000043] flex flex-col justify-start gap-9 items-center py-16 px-8 bg-white shadow-md rounded-md popular w-full">
       <div className="border-b-2 py-4 border-b-[#00b289]">
         <div className="sm:text-2xl mb-3">{props.title}</div>
         <div className="font-serif font-light opacity-65 text-sm">{props.text}</div>

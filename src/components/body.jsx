@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./card";
+import Addon from "./addon";
+import Faq from "./faq";
 
 const Body = () => {
   return (
@@ -8,13 +10,13 @@ const Body = () => {
         <div className="sm:text-3xl">PLANS & PRICING</div>
         <div className="flex align-middle items-center justify-between gap-8">
           <h3>MONTHLY</h3>
-          <div className="relative w-14 h-8 bg-[#00b289] rounded-3xl flex align-middle items-center px-1">
-            <div className="absolute w-7 h-7 bg-white rounded-full"></div>
+          <div className="relative w-14 h-8 bg-[#00b289] rounded-3xl flex align-middle items-center px-1 hover:cursor-pointer">
+            <div className="absolute w-7 h-7 bg-white rounded-full hover:cursor-pointer"></div>
           </div>
           <h3>YEARLY</h3>
         </div>
       </div>
-      <div className="flex sm:flex-row flex-col justify-between gap-5 sm:p-6 z-10 w-full bg-[red]">
+      <div className="flex sm:flex-row flex-col justify-between gap-5 sm:p-0 p-6 z-10 w-full">
         <Card
           title="Starter"
           text="Ideal for freelancers and contractors just starting out."
@@ -62,6 +64,39 @@ const Body = () => {
           l9="Unlimited Project Collaborators"
         />
       </div>
+
+      <div className="w-full flex flex-col justify-between align-middle items-center gap-3 sm:py-12">
+        <h2 className="text-3xl p-8 opacity-80">
+          Super charge your work with add-ons
+        </h2>
+        <Addon
+          title="Collaborators"
+          text="Invite other users to specific projects for limited access and
+              functionality."
+          price={"Free"}
+        />
+        <Addon
+          title="Partners"
+          text="Invite other users for full account access and company management."
+          price={"$9"}
+          per="/MONTH"
+        />
+        <Addon
+          title="Bonsai Task"
+          text="Track expenses, identify write-offs, and estimate quarterly taxes easily."
+          price={"$10"}
+          link="LEARN MORE &gt;"
+          per="/MONTH"
+        />
+      </div>
+      <div className="p-14 flex justify-between align-middle items-center w-5/6 mx-auto bg-[#f2faff] rounded-xl mb-12">
+        <div className="flex flex-col justify-between align-middle items-start gap-2">
+          <p className="text-4xl opacity-65">It's <span className="opacity-100 text-[#00b289]">your</span> business.</p>
+          <p className="text-4xl opacity-65">We're here to help it grow.</p>
+        </div>
+        <button className="px-6 py-3 rounded-lg bg-[#00b289] text-white">START FREE</button>
+      </div>
+      <Faq />
     </div>
   );
 };
