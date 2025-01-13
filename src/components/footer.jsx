@@ -53,12 +53,20 @@ const Footer = (props) => {
       <div className='flex flex-col justify-between align-middle items-left gap-4'>
         <h3 className='text-xl font-semibold'>BONSAI</h3>
         <ul className='flex flex-col justify-between align-middle items-left gap-2 font-light text-md'>
-          <li>links</li>
-          <li>links</li>
-          <li>links</li>
-          <li>links</li>
-          <li>links</li>
-          <li>links</li>
+          <li>About</li>
+          <li>Careers</li>
+          <li>Support</li>
+          <li>linkedIn</li>
+          <li>Twitter</li>
+          <li>Privacy Policy</li>
+          <li>Legal</li>
+        </ul>
+        <ul className='flex flex-col justify-between align-middle items-left gap-2 mt-6 font-light text-md'>
+          <li>Affiliates</li>
+          <li>Write for us</li>
+        </ul>
+        <ul className='flex flex-col justify-between align-middle items-left gap-2 mt-6 font-light text-md'>
+          <li>Comparisons</li>
         </ul>
       </div>
     </div>
