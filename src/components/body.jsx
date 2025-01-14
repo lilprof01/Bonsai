@@ -5,7 +5,7 @@ import Faq from "./faq";
 
 const Body = () => {
   return (
-    <div className="body bg-[#f5f5f5] sm:px-20 pt-20 sm:pt-52 mt-[50px] flex flex-col gap-12">
+    <div className="body bg-[#f5f5f5] p-6 lg:px-20 pt-20 lg:pt-52 mt-[50px] flex flex-col gap-12">
       <div className="flex sm:flex-row flex-col align-middle items-center justify-between gap-20 mx-auto z-10">
         <div className="sm:text-3xl">PLANS & PRICING</div>
         <div className="flex align-middle items-center justify-between gap-8">
@@ -18,7 +18,7 @@ const Body = () => {
       </div>
 
       {/* Card section */}
-      <div className="flex sm:flex-row flex-col justify-between gap-5 sm:p-0 p-6 z-10 w-full">
+      <div className="flex lg:flex-row flex-col justify-between gap-5 sm:p-0 z-10 w-full">
         <Card
           title="Starter"
           text="Ideal for freelancers and contractors just starting out."
@@ -68,7 +68,7 @@ const Body = () => {
       </div>
 
       {/* Addon section */}
-      <div className="w-full flex flex-col justify-between align-middle items-center gap-3 px-6 sm:py-12">
+      <div className="w-full flex flex-col justify-between align-middle items-center gap-3 sm:py-12">
         <h2 className="text-2xl sm:text-3xl p-8 opacity-80 text-center">
           Super charge your work with add-ons
         </h2>
@@ -93,12 +93,19 @@ const Body = () => {
         />
       </div>
 
-      <div className="p-14 flex flex-col sm:flex-row text-center justify-between align-middle items-center gap-4 w-5/6 mx-auto bg-[#f2faff] rounded-xl mb-12">
-        <div className="flex flex-col justify-between align-middle items-start gap-2">
-          <p className="text-4xl opacity-65">It's <span className="opacity-100 text-[#00b289]">your</span> business.</p>
-          <p className="text-4xl opacity-65">We're here to help it grow.</p>
+      <div className="p-10 flex flex-col sm:flex-row text-center gap-4 md:text-left justify-between align-middle items-center lg:text-left lg:w-5/6 mx-auto bg-[#f2faff] rounded-xl mb-12">
+        <div className="flex flex-col justify-between align-middle items-center text-center lg:text-left gap-2">
+          <p className="text-4xl md:text-5xl opacity-65">
+            It's <span className="opacity-100 text-[#00b289]">your</span>{" "}
+            business.
+          </p>
+          <p className="text-4xl md:text-5xl opacity-65">
+            We're here to help it grow.
+          </p>
         </div>
-        <button className="px-6 py-3 rounded-lg bg-[#00b289] text-white">START FREE</button>
+        <button className="text-nowrap px-6 py-3 rounded-lg bg-[#00b289] text-white">
+          START FREE
+        </button>
       </div>
       <Faq />
     </div>

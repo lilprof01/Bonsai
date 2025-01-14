@@ -79,7 +79,7 @@ const Header = () => {
         <h1 className="text-2xl sm:block hidden">Company</h1>
       </div>
 
-      <div className="items-center hidden sm:flex">
+      <div className="items-center hidden lg:flex">
         <ul className="flex justify-center align-middle items-center gap-8 text-md">
           <li
             onMouseEnter={toggleMenu}
@@ -333,7 +333,7 @@ const Header = () => {
         </ul>
       </div>
 
-      <div className="hidden sm:flex items-center gap-6">
+      <div className="hidden lg:flex items-center gap-6">
         <button className="px-6 py-2 rounded-md border border-[#00b289] text-[#00b289] hover:bg-[#00b289] hover:opacity-85 active:opacity-95 hover:text-white transition-all">
           LOG IN
         </button>
@@ -342,7 +342,7 @@ const Header = () => {
         </button>
       </div>
 
-      <div className="flex flex-col items-center align-middle sm:hidden">
+      <div className="flex flex-col items-center align-middle lg:hidden">
         <div className="h-1 w-8 rounded-md mb-1 bg-[#00b289]"></div>
         <div className="h-1 w-8 rounded-md bg-[#00b289]"></div>
         <div className="h-1 w-8 rounded-md mt-1 bg-[#00b289]"></div>
