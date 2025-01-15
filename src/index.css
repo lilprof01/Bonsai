@@ -123,15 +123,17 @@ body, html {
 }
 
 .faq-text{
-  animation: slide 0.15s ease-in-out forwards;
+  /* background-color: #00b289; */
+  overflow: hidden;
+  animation: slide 0.2s ease-out;
 }
 
 @keyframes slide {
   0% {
-    transform: translateY(-20%);
+    height: 0;
   }
   100%{
-    transform: translateY(0);
+    height: 65px;
   }
 }
 
@@ -145,7 +147,9 @@ body, html {
 }
 
 .template-drop{
-  animation: show 0.5s ease-out;
+  width: 80%;
+  animation: show 0.3s ease-in-out;
+  /* background-color: #00b289; */
   overflow: hidden;
 }
 
@@ -154,6 +158,32 @@ body, html {
     height: 0;
   }
   100%{
-    height: 100%;
+    height: 90%;
+  }
+}
+
+.toggle{
+  animation: toggle 0.5s ease-out forwards;
+}
+
+@keyframes toggle{
+  from{
+    left: 4px;
+  }
+  to{
+    left: 45%;
+  }
+}
+
+.toggle-off{
+  animation: toggleoff 0.5s ease-out forwards;
+}
+
+@keyframes toggleoff{
+  from{
+    left: 45%;
+  }
+  to{
+    left: 4px;
   }
 }

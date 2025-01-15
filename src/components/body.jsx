@@ -1,17 +1,23 @@
-import React from "react";
+import { useState } from "react";
 import Card from "./card";
 import Addon from "./addon";
 import Faq from "./faq";
 
 const Body = () => {
+  const [ card, setCard ] = useState(false);
+
+  const handleToggle = () => {
+    setCard((prev) => !prev);
+  };
+
   return (
     <div className="body bg-[#f5f5f5] p-6 lg:px-20 pt-20 lg:pt-52 mt-[50px] flex flex-col gap-12">
       <div className="flex sm:flex-row flex-col align-middle items-center justify-between gap-20 mx-auto z-10">
         <div className="sm:text-3xl">PLANS & PRICING</div>
         <div className="flex align-middle items-center justify-between gap-8">
           <h3>MONTHLY</h3>
-          <div className="relative w-14 h-8 bg-[#00b289] rounded-3xl flex align-middle items-center px-1 hover:cursor-pointer">
-            <div className="absolute w-7 h-7 bg-white rounded-full hover:cursor-pointer"></div>
+          <div className={`relative w-14 h-8 bg-[#00b289] rounded-3xl flex align-middle items-center px-1 hover:cursor-pointer`}>
+            <div onClick={handleToggle} className={`absolute left-1 w-7 h-7 bg-white rounded-full hover:cursor-pointer ${card ? 'toggle' : 'toggle-off'}`}></div>
           </div>
           <h3>YEARLY</h3>
         </div>
@@ -20,9 +26,11 @@ const Body = () => {
       {/* Card section */}
       <div className="flex lg:flex-row flex-col justify-between gap-5 sm:p-0 z-10 w-full">
         <Card
+          card={card}
           title="Starter"
           text="Ideal for freelancers and contractors just starting out."
-          price={24}
+          priceM={24}
+          priceY={17}
           l0="All Templates"
           l1="Unlimited Clients & Projects"
           l2="Invoicing & Payments"
@@ -36,9 +44,11 @@ const Body = () => {
           icon={<i class="bx bx-check"></i>}
         />
         <Card
+          card={card}
           title="Professional"
           text="Everything a growing independent business needs to thrive."
-          price={39}
+          priceM={39}
+          priceY={32}
           l0="Everything in Starter plus..."
           l1="Custom Branding"
           l2="Forms & Questionnaires"
@@ -51,9 +61,11 @@ const Body = () => {
           l9=""
         />
         <Card
+          card={card}
           title="Business"
           text="The perfect package for small businesses and agencies."
-          price={79}
+          priceM={79}
+          priceY={52}
           l0="Everything in Starter and Professional plus..."
           l1="Subcontractor Management"
           l2="Hiring Agreement Templates (1099 contracts)"
