@@ -4,7 +4,7 @@ import Addon from "./addon";
 import Faq from "./faq";
 
 const Body = () => {
-  const [ card, setCard ] = useState(false);
+  const [card, setCard] = useState(false);
 
   const handleToggle = () => {
     setCard((prev) => !prev);
@@ -16,8 +16,15 @@ const Body = () => {
         <div className="sm:text-3xl">PLANS & PRICING</div>
         <div className="flex align-middle items-center justify-between gap-8">
           <h3>MONTHLY</h3>
-          <div className={`relative w-14 h-8 bg-[#00b289] rounded-3xl flex align-middle items-center px-1 hover:cursor-pointer`}>
-            <div onClick={handleToggle} className={`absolute left-1 w-7 h-7 bg-white rounded-full hover:cursor-pointer ${card ? 'toggle' : 'toggle-off'}`}></div>
+          <div
+            className={`relative w-14 h-8 bg-[#00b289] rounded-3xl flex align-middle items-center px-1 hover:cursor-pointer`}
+          >
+            <div
+              onClick={handleToggle}
+              className={`absolute left-1 w-7 h-7 bg-white rounded-full hover:cursor-pointer ${
+                card ? "toggle" : "toggle-off"
+              }`}
+            ></div>
           </div>
           <h3>YEARLY</h3>
         </div>
@@ -31,16 +38,16 @@ const Body = () => {
           text="Ideal for freelancers and contractors just starting out."
           priceM={24}
           priceY={17}
-          l0="All Templates"
-          l1="Unlimited Clients & Projects"
-          l2="Invoicing & Payments"
-          l3="Proposals & Contracts"
-          l4="Tasks & Time Tracking"
-          l5="Client CRM"
-          l6="Expense Tracking"
-          l7="Up to 5 Project Collaborators"
-          l8=""
-          l9=""
+          features={[
+            "All Templates",
+            "Unlimited Clients & Projects",
+            "Invoicing & Payments",
+            "Proposals & Contracts",
+            "Tasks & Time Tracking",
+            "Client CRM",
+            "Expense Tracking",
+            "Up to 5 Project Collaborators",
+          ]}
           icon={<i class="bx bx-check"></i>}
         />
         <Card
@@ -49,16 +56,18 @@ const Body = () => {
           text="Everything a growing independent business needs to thrive."
           priceM={39}
           priceY={32}
-          l0="Everything in Starter plus..."
-          l1="Custom Branding"
-          l2="Forms & Questionnaires"
-          l3="Workflow Automations"
-          l4="Client Portal"
-          l5="QuickBooks Integration"
-          l6="Calendly Integration"
-          l7="Zapier Integration"
-          l8="Up to 15 Project Collaborators"
-          l9=""
+          features={[
+            "Everything in Starter plus...",
+            "Custom Branding",
+            "Forms & Questionnaires",
+            "Workflow Automations",
+            "Client Portal",
+            "QuickBooks Integration",
+            "Calendly Integration",
+            "Zapier Integration",
+            "Up to 15 Project Collaborators",
+          ]}
+          icon={<i class="bx bx-check"></i>}
         />
         <Card
           card={card}
@@ -66,16 +75,19 @@ const Body = () => {
           text="The perfect package for small businesses and agencies."
           priceM={79}
           priceY={52}
-          l0="Everything in Starter and Professional plus..."
-          l1="Subcontractor Management"
-          l2="Hiring Agreement Templates (1099 contracts)"
-          l3="Subcontractor Onboarding"
-          l4="Talent Pool"
-          l5="3 Team Seats (additional seats $9/month)"
-          l6="Accountant Access"
-          l7="Connect Multiple Bank Accounts"
-          l8="Unlimited Subcontractors"
-          l9="Unlimited Project Collaborators"
+          features={[
+            "Everything in Starter and Professional plus...",
+            "Subcontractor Management",
+            "Hiring Agreement Templates (1099 contracts)",
+            "Subcontractor Onboarding",
+            "Talent Pool",
+            "3 Team Seats (additional seats $9/month)",
+            "Accountant Access",
+            "Connect Multiple Bank Accounts",
+            "Unlimited Subcontractors",
+            "Unlimited Project Collaborators",
+          ]}
+          icon={<i class="bx bx-check"></i>}
         />
       </div>
 
