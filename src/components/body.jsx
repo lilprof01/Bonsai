@@ -11,9 +11,9 @@ const Body = () => {
   };
 
   return (
-    <div className="body bg-[#f5f5f5] p-6 lg:px-20 pt-20 lg:pt-52 mt-[50px] flex flex-col gap-12">
-      <div className="flex sm:flex-row flex-col align-middle items-center justify-between gap-20 mx-auto z-10">
-        <div className="sm:text-3xl">PLANS & PRICING</div>
+    <div className="body bg-[#f5f5f5] p-6 lg:px-20 pt-16 lg:pt-52 mt-[50px] flex flex-col gap-12">
+      <div className="flex sm:flex-row flex-col align-middle items-center justify-between gap-16 md:gap-20 mx-auto z-10">
+        <div className="sm:text-3xl text-xl">PLANS & PRICING</div>
         <div className="flex align-middle items-center justify-between gap-8">
           <h3>MONTHLY</h3>
           <div

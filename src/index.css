@@ -163,7 +163,7 @@ body, html {
 }
 
 .toggle{
-  animation: toggle 0.5s ease-out forwards;
+  animation: toggle 0.3s ease-out forwards;
 }
 
 @keyframes toggle{
@@ -176,7 +176,7 @@ body, html {
 }
 
 .toggle-off{
-  animation: toggleoff 0.5s ease-out forwards;
+  animation: toggleoff 0.3s ease-out forwards;
 }
 
 @keyframes toggleoff{
@@ -185,5 +185,106 @@ body, html {
   }
   to{
     left: 4px;
+  }
+}
+
+.toggle-nav{
+  display: flex;
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+@keyframes slideOut{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translate(0);
+  }
+}
+
+.toggle-nav-off{
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translate(100%);
+    display: none;
+  }
+}
+
+.burger1{
+  animation: down-rotate 0.3s ease-out forwards;
+}
+
+@keyframes down-rotate{
+  0%{
+    margin-bottom: 4px;
+  }
+  100%{
+    margin-bottom: -4px;
+    rotate: 45deg;
+    background-color: black;
+  }
+}
+
+.burger2{
+  animation: up-rotate 0.3s ease-out forwards;
+}
+
+@keyframes up-rotate{
+  0%{
+    margin-top: 4px;
+  }
+  100%{
+    margin-top: -4px;
+    rotate: -45deg;
+    background-color: black;
+  }
+}
+
+.burger-1{
+  animation: down-rotate-off 0.3s ease-out forwards;
+}
+
+@keyframes down-rotate-off{
+  0%{
+    margin-bottom: -4px;
+    rotate: 45deg;
+    background-color: black;
+  }
+  100%{
+    margin-bottom: 4px;
+  }
+}
+
+.burger-2{
+  animation: up-rotate-off 0.3s ease-out forwards;
+}
+
+@keyframes up-rotate-off{
+  0%{
+    margin-top: -4px;
+    rotate: -45deg;
+    background-color: black;
+  }
+  100%{
+    margin-top: 4px;
+  }
+}
+
+.show{
+  animation: return 1.5s ease-out;
+}
+
+@keyframes return{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

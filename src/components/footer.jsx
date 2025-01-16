@@ -15,7 +15,7 @@ const Footer = (props) => {
     <div className="footer px-6 py-20 md:px-10 lg:px-36 bg-[#f5f5f5]">
       <div className="flex flex-col md:flex-row justify-start md:justify-between align-middle items-left gap-5 md:px-10">
         <div className="flex flex-col justify-start align-middle items-left gap-4 w-full">
-          <h3 className="text-xl font-semibold">PRODUCT</h3>
+          <h3 className="text-lg sm:text-xl font-semibold">PRODUCT</h3>
           <ul className="flex flex-col justify-between align-middle items-left gap-2 font-light text-md">
             <li>Proposal</li>
             <li>Contracts</li>
@@ -35,7 +35,7 @@ const Footer = (props) => {
         </div>
         <div className="flex flex-col justify-start align-middle items-left gap-5 w-full">
           <div className="flex flex-col justify-start align-middle items-left gap-4">
-            <h3 className="text-xl font-semibold">FREE RESOURCES</h3>
+            <h3 className="text-lg sm:text-xl font-semibold">FREE RESOURCES</h3>
             <ul className="flex flex-col justify-between align-middle items-left gap-2 font-light text-md">
               <li>Freelance Resources</li>
               <li>Freelance Blog by Bonsai</li>
@@ -49,14 +49,14 @@ const Footer = (props) => {
             </ul>
           </div>
           <div className="flex flex-col justify-start align-middle items-left gap-4">
-            <h3 className="text-xl font-semibold">Templates</h3>
+            <h3 className="text-lg sm:text-xl font-semibold">Templates</h3>
             <ul className="flex flex-col justify-between align-middle items-left gap-2 font-light text-md">
               <li>
-                <div onClick={() => handleShow(1)}>
-                  Invoice Templates <i className="bx bx-chevron-down"></i>
+                <div onClick={() => handleShow(1)} className="flex items-center">
+                  Invoice Templates <i className="bx bx-sm bx-chevron-down"></i>
                 </div>
                 {show[1] && (
-                  <ul className="pl-3 template-drop text-sm flex flex-col justify-between items-left align-middle gap-2">
+                  <ul className="pl-3 template-drop flex flex-col justify-between items-left align-middle gap-2">
                     <li>Invoice Generator</li>
                     <li>Blank Invoice Template</li>
                     <li>Consultant Invoice Template</li>
@@ -71,11 +71,11 @@ const Footer = (props) => {
               </li>
 
               <li>
-                <div onClick={() => handleShow(2)}>
-                  Proposal Templates <i className="bx bx-chevron-down"></i>
+                <div onClick={() => handleShow(2)} className="flex items-center">
+                  Proposal Templates <i className="bx bx-sm bx-chevron-down"></i>
                 </div>
                 {show[2] && (
-                  <ul className="pl-3 template-drop text-sm flex flex-col justify-between items-left align-middle gap-2">
+                  <ul className="pl-3 template-drop flex flex-col justify-between items-left align-middle gap-2">
                     <li>Website Proposal Template</li>
                     <li>Digital Marekting Proposal Template</li>
                     <li>Social Media Marketing Proposal</li>
@@ -87,11 +87,11 @@ const Footer = (props) => {
               </li>
 
               <li>
-                <div onClick={() => handleShow(3)}>
-                  Contract Templates <i className="bx bx-chevron-down"></i>
+                <div onClick={() => handleShow(3)} className="flex items-center">
+                  Contract Templates <i className="bx bx-sm bx-chevron-down"></i>
                 </div>
                 {show[3] && (
-                  <ul className="pl-3 template-drop text-sm flex flex-col justify-between items-left align-middle gap-2">
+                  <ul className="pl-3 template-drop flex flex-col justify-between items-left align-middle gap-2">
                     <li>Online Contract</li>
                     <li>Graphic Design Contract</li>
                     <li>Freelance Contract Template</li>
@@ -106,11 +106,11 @@ const Footer = (props) => {
               </li>
 
               <li>
-                <div onClick={() => handleShow(4)}>
-                  Agreement Templates <i className="bx bx-chevron-down"></i>
+                <div onClick={() => handleShow(4)} className="flex items-center">
+                  Agreement Templates <i className="bx bx-sm bx-chevron-down"></i>
                 </div>
                 {show[4] && (
-                  <ul className="pl-3 template-drop text-sm flex flex-col justify-between items-left align-middle gap-2">
+                  <ul className="pl-3 template-drop flex flex-col justify-between items-left align-middle gap-2">
                     <li>Retainer Agreement Template</li>
                     <li>Influencer Agreement Template</li>
                     <li>Collaboration Agreement Template</li>
@@ -121,13 +121,12 @@ const Footer = (props) => {
               </li>
 
               <li>
-                <div onClick={() => handleShow(5)}>
-                  Scope of Work Templates <i className="bx bx-chevron-down"></i>
+                <div onClick={() => handleShow(5)} className="flex items-center">
+                  Scope of Work Templates <i className="bx bx-sm bx-chevron-down"></i>
                 </div>
                 {show[5] && (
-                  <ul className="pl-3 template-drop text-sm flex flex-col justify-between items-left align-middle gap-2">
-                    <li>Website Development Template</li>
-                    <li>Work</li>
+                  <ul className="pl-3 template-drop flex flex-col justify-between items-left align-middle gap-2">
+                    <li>Website Development Template Work</li>
                     <li>Digital Marketing Scope of Work</li>
                     <li>Consultant Statement of Work Template</li>
                     <li>Software Development Scope of Work</li>
@@ -136,11 +135,11 @@ const Footer = (props) => {
               </li>
 
               <li>
-                <div onClick={() => handleShow(6)}>
-                  Quote Templates <i className="bx bx-chevron-down"></i>
+                <div onClick={() => handleShow(6)} className="flex items-center">
+                  Quote Templates <i className="bx bx-sm bx-chevron-down"></i>
                 </div>
                 {show[6] && (
-                  <ul className="pl-3 template-drop text-sm flex flex-col justify-between items-left align-middle gap-2">
+                  <ul className="pl-3 template-drop flex flex-col justify-between items-left align-middle gap-2">
                     <li>Freelance Quotation Template</li>
                     <li>Web Design Quotation Template</li>
                     <li>Graphic Design Quotation Template</li>
@@ -157,7 +156,7 @@ const Footer = (props) => {
           </div>
         </div>
         <div className="flex flex-col justify-start align-middle items-left gap-4 w-full">
-          <h3 className="text-xl font-semibold">BONSAI</h3>
+          <h3 className="text-lg sm:text-xl font-semibold">BONSAI</h3>
           <ul className="flex flex-col justify-between align-middle items-left gap-2 font-light text-md">
             <li>About</li>
             <li>Careers</li>
@@ -173,11 +172,11 @@ const Footer = (props) => {
           </ul>
           <ul className="flex flex-col justify-between align-middle items-left gap-2 mt-6 font-light text-md">
             <li>
-              <div onClick={() => handleShow(7)}>
-                Comparisons <i className="bx bx-chevron-down"></i>
+              <div onClick={() => handleShow(7)} className="flex items-center">
+                Comparisons <i className="bx bx-sm bx-chevron-down"></i>
               </div>
               {show[7] && (
-                <ul className="pl-3 template-drop text-sm flex flex-col justify-between items-left align-middle gap-2">
+                <ul className="pl-3 template-drop flex flex-col justify-between items-left align-middle gap-2">
                   <li>Freshbook Alternatives</li>
                   <li>Quickbook Alternatives</li>
                   <li>Wave vs Quickbooks</li>

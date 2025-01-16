@@ -10,6 +10,7 @@ import { faFileInvoiceDollar } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Template from "./template";
 import Feature from "./feature";
+import Mobilenav from "./mobilenav";
 
 // Dropbox Card components
 const DropBox = (props) => {
@@ -46,6 +47,7 @@ const Header = () => {
   const [isTemplate, setIsTemplate] = useState(false);
   const [visible, setVisible] = useState(false);
   const [selected, setSelected] = useState("");
+  const [nav, setNav] = useState(false);
 
   const handleSeelect = (element) => {
     console.log('selected', element);
@@ -72,11 +74,15 @@ const Header = () => {
     clearTimeout();
   };
 
+  const toggleNav = () => {
+    setNav((prev) => !prev);
+  }
+
   return (
-    <header className="fixed top-0 z-50 w-full flex sm:px-20 px-4 py-4 justify-between align-middle bg-gray-100 items-center">
+    <header className="fixed top-0 z-50 w-full flex sm:px-20 px-4 py-6 justify-between align-middle bg-gray-100 items-center">
       <div className="flex items-center">
         <i className="bx-md bx bxl-xing"></i>
-        <h1 className="text-2xl sm:block hidden">Company</h1>
+        <h1 className={`text-2xl ${nav ? 'hidden' : ''}`}>Company</h1>
       </div>
 
       <div className="items-center hidden lg:flex">
@@ -342,11 +348,14 @@ const Header = () => {
         </button>
       </div>
 
-      <div className="flex flex-col items-center align-middle lg:hidden">
-        <div className="h-1 w-8 rounded-md mb-1 bg-[#00b289]"></div>
-        <div className="h-1 w-8 rounded-md bg-[#00b289]"></div>
-        <div className="h-1 w-8 rounded-md mt-1 bg-[#00b289]"></div>
+      {/* hamburger and mobile nav menu*/}
+      <div onClick={toggleNav} className="flex flex-col items-center align-middle lg:hidden hover:cursor-pointer">
+        <div className={`h-1 w-8 rounded-md mb-1 bg-[black] ${nav ? 'burger1' : 'burger-1'}`}></div>
+        <div className={`h-1 w-8 rounded-md bg-[black] ${nav ? 'invisible' : 'show'}`}></div>
+        <div className={`h-1 w-8 rounded-md mt-1 bg-[black] ${nav ? 'burger2' : 'burger-2'}`}></div>
       </div>
+
+      <Mobilenav nav={nav} />
     </header>
   );
 };
